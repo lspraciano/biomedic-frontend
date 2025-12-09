@@ -37,7 +37,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          file: ./docker/Dockerfile.api
+          file: ./docker/Dockerfile
           push: true
           tags: |
             ${{ env.DOCKER_IMAGE }}:latest
