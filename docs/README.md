@@ -13,7 +13,7 @@ O deploy desta aplicação foi realizando usando google cloud e está disponíve
 através do endereço abaixo
 
 ```
-...
+https://biomedic-frontend.lucaspraciano.com/
 ```
 
 ## ☄️ Versão Atual
@@ -73,7 +73,7 @@ Siga os passos abaixo para configurar o ambiente de desenvolvimento:
 1. Clonando o Repositório
 
 ```bash
-git clone https://github.com/lspraciano/project-biomedic-ia-demonstrations-frontend.git
+git clone https://github.com/lspraciano/biomedic-frontend.git
 ```
 
 2. No diretório raiz do projeto, instale as dependências com o comando
@@ -102,17 +102,17 @@ Para acessar a documentação do backend acesse a documentação através
 do link:
 
 ```
-https://github.com/lspraciano/projectBiomedicIADemonstrationsBackend
+https://github.com/lspraciano/biomedic-backend
 ```
 
 ou
-clique [aqui](https://github.com/lspraciano/projectBiomedicIADemonstrationsBackend) para abrir o endereço diretamente no
+clique [aqui](https://github.com/lspraciano/biomedic-backend) para abrir o endereço diretamente no
 navegador
 
 5. Acesse a Aplicação Local:
 
 ```
-http://localhost:8001/biomedic-ia-demonstration-front/
+http://localhost:8001/
 ```
 
 ou

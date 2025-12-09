@@ -7,7 +7,7 @@ on:
 
 env:
   DOCKER_IMAGE: lucaspraciano/biomedic-frontend
-  INFRA_REPO: lspraciano/lspracianoHomeLab
+  INFRA_REPO: lspraciano/lspraciano-home-lab
   APP_NAME: biomedic-frontend
 
 jobs:
