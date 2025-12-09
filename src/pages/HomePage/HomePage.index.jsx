@@ -28,6 +28,7 @@ export default function HomePage() {
                         de atuação da IA na saúde. No entanto, é fundamental ressaltar
                         que essa aplicação não possui relevância clínica e que foi treinada
                         com limitações, o que prejudica o desempenho dela.
+
                     </p>
                 </div>
                 <div
