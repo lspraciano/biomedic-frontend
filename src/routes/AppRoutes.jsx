@@ -6,7 +6,7 @@ import PredictPage from "../pages/PredictPage/PredictPage.index.jsx";
 
 export default function AppRoutes() {
     return (
-        <Router basename={"/biomedic-ia-demonstration-frontend"}>
+        <Router basename={"/"}>
             <Routes>
                 <Route
                     exact path="/predict"
