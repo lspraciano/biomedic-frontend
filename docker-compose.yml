@@ -1,8 +1,7 @@
-version: "3.8"
 services:
   front:
-    container_name: project_biomedic_ia_demonstrations_frontend
-    image: lucaspraciano/project_biomedic_ia_demonstrations_frontend
+    container_name: biomedic-frontend
+    image: lucaspraciano/biomedic-frontend
     build:
       context: .
       dockerfile: docker/Dockerfile
