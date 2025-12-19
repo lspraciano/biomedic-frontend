@@ -54,23 +54,29 @@ export default function PredictTool(
         []
     );
 
-    const setImageToBeDisplayed = async (
-        filePath,
-        endpointUrl
-    ) => {
-        await dispatch(
-            setImageDisplayed(
-                filePath
-            )
-        );
+    const setImageToBeDisplayed = async (input, endpointUrl) => {
 
-        await dispatch(
-            predictImage(
-                {
-                    filePath: filePath,
-                    endpointTarget: endpointUrl
-                }
-            )
+        let file;
+        let previewUrl;
+
+        if (input instanceof File) {
+            file = input;
+            previewUrl = URL.createObjectURL(file);
+        } else {
+            previewUrl = input;
+
+            const response = await fetch(input);
+            const blob = await response.blob();
+            file = new File([blob], "sample.jpg", {type: blob.type});
+        }
+
+        dispatch(setImageDisplayed(previewUrl));
+
+        dispatch(
+            predictImage({
+                file,
+                endpointTarget: endpointUrl
+            })
         );
     };
 

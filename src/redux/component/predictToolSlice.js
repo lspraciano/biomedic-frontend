@@ -12,23 +12,20 @@ export const predictImage = createAsyncThunk(
     "predictTool/predictImage",
     async (
         {
-            filePath,
+            file,
             endpointTarget
         },
         {
             rejectWithValue
         }
     ) => {
-        const response = await fetch(filePath);
-        const fileBlob = await response.blob();
-        const file = new File([fileBlob], 'file.jpg', {type: 'image/jpeg'});
+
 
         const formData = new FormData();
         formData.append('file', file);
 
         const config = {
             headers: {
-                'Content-Type': 'multipart/form-data',
                 'accept': 'image/jpeg',
             },
             responseType: 'blob',
@@ -43,7 +40,7 @@ export const predictImage = createAsyncThunk(
                 config,
             )
 
-            const image_data = URL.createObjectURL(new Blob([await response.data])).toString();
+            const image_data = URL.createObjectURL(response.data);
             const detections = response.headers["detections"];
 
             return {image_data, detections}

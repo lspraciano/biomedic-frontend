@@ -27,21 +27,19 @@ export default function DragAndDropFile(
         const file = event.dataTransfer.files[0];
 
         if (file) {
-            const objectURL = URL.createObjectURL(file);
             await setFunction(
-                objectURL,
+                file,
                 targetUrl
             );
         }
     };
 
     const handleChange = async (event) => {
-        const filePath = event.target.files[0];
+        const file = event.target.files[0];
 
-        if (filePath) {
-            const objectURL = URL.createObjectURL(filePath);
+        if (file) {
             await setFunction(
-                objectURL,
+                file,
                 targetUrl
             );
         }
