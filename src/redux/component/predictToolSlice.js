@@ -40,7 +40,17 @@ export const predictImage = createAsyncThunk(
                 config,
             )
 
-            const image_data = URL.createObjectURL(response.data);
+            const image_data = await new Promise(
+                (
+                    resolve,
+                    reject
+                ) => {
+                    const reader = new FileReader();
+                    reader.onload = () => resolve(reader.result);
+                    reader.onerror = reject;
+                    reader.readAsDataURL(response.data);
+                }
+            );
             const detections = response.headers["detections"];
 
             return {image_data, detections}
